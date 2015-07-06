@@ -1,0 +1,13 @@
+= form_for @author, url: authors_path do |f|
+  h1 New author
+  p
+    = f.label :name
+    = f.text_field :name
+
+  p
+    = f.label :surname
+    = f.text_field :surname
+
+  p
+    = f.submit
+end
