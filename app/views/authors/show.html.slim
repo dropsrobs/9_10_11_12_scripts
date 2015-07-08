@@ -1,2 +1,15 @@
 p Name: #{@author.name}
 p Surname: #{@author.surname}
+
+table
+  tr
+    th.title title
+    th.edition edition
+  - @author.books.each do |book|
+    tr
+      td.title = book.title
+      td.edition = book.edition
+
+table
+  td = link_to 'Edit', edit_author_path(@author)
+  td = link_to 'Back to list', authors_path

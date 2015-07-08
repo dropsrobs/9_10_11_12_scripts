@@ -1,0 +1,24 @@
+= form_for @book do |f|
+  - if @book.errors.any?
+    h2 Saving prohibited because of
+    = pluralize(@book.errors.count, 'error')
+    ul
+      - @book.errors.full_messages.each do |msg|
+        li = msg
+    end
+  = collection_check_boxes(:book, :author_ids, Author.all, :id, :name_with_initial) do |author|
+    = author.label { author.check_box + author.text }
+  end
+  p
+    = f.label :title
+    br
+    = f.text_field :title
+
+  p
+    = f.label :edition
+    br
+    = f.text_field :edition
+
+  p
+    = f.submit
+end

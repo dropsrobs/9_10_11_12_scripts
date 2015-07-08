@@ -1,0 +1,12 @@
+p Title: #{@book.title}
+p Edition: #{@book.edition}
+p
+  | Author
+  table
+    - @book.authors.each do |a|
+      tr
+        td.name = a.name
+        td.surname = a.surname
+= link_to 'Edit', edit_book_path(@book)
+= link_to 'Back to list', authors_path
+
