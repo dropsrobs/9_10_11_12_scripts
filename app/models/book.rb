@@ -1,5 +1,6 @@
 class Book < ActiveRecord::Base
-  has_and_belongs_to_many :authors
+  has_many :authors, through: :authors_books
+  has_many :authors_books
   validates :title, presence: true
   validates :edition, presence: true
   validates :edition, numericality: { only_integer: true }

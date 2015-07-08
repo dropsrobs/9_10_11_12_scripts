@@ -1,0 +1,12 @@
+AllCops:
+  RunRailsCops: true
+  Exclude:
+    - 'bin/**/*'
+    - 'test/**/*'
+    - 'config/**/*'
+    - 'Gemfile'
+    - 'db/schema.rb'
+    - 'db/seeds.rb'
+    - 'Rakefile'
+Documentation:
+  Enabled: false
