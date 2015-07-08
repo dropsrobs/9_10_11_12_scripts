@@ -1,15 +1,15 @@
-p Name: #{@author.name}
-p Surname: #{@author.surname}
-
-table
-  tr
-    th.title title
-    th.edition edition
+h3 Name: #{@author.name}
+h3 Surname: #{@author.surname}
+hr
+table class='table'
+  tr class='active'
+    th title
+    th edition
   - @author.books.each do |book|
     tr
-      td.title = book.title
-      td.edition = book.edition
+      td = book.title
+      td = book.edition
 
 table
-  td = link_to 'Edit', edit_author_path(@author)
-  td = link_to 'Back to list', authors_path
+  td = link_to 'Edit', edit_author_path(@author), class: 'btn btn-default'
+  td = link_to 'Back to list', authors_path, class: 'btn btn-default'

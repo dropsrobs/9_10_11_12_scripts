@@ -1,12 +1,14 @@
-p Title: #{@book.title}
-p Edition: #{@book.edition}
+h3 Title: #{@book.title}
+h4 Edition: #{@book.edition}
+hr
 p
-  | Author
-  table
+  table class='table'
+    tr class='active'
+      th colspan=2 Author
     - @book.authors.each do |a|
       tr
         td.name = a.name
         td.surname = a.surname
-= link_to 'Edit', edit_book_path(@book)
-= link_to 'Back to list', authors_path
+= link_to 'Edit', edit_book_path(@book), class: 'btn btn-default'
+= link_to 'Back to list', authors_path, class: 'btn btn-default'
 
