@@ -36405,3 +36405,1227 @@ Processing by AuthorsController#index as HTML
   [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 2]]
   Rendered authors/index.html.slim within layouts/application (2.9ms)
 Completed 200 OK in 86ms (Views: 85.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 10:43:00 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 1]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 2]]
+  Rendered authors/index.html.slim within layouts/application (48.8ms)
+Completed 200 OK in 3007ms (Views: 2994.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-6eb9f3d6cf2c2d07f133cee9aa463cb3bd4f40804a61c16de2d8f374961a7baf.css?body=1" for 127.0.0.1 at 2015-07-13 10:43:03 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-07-13 10:43:03 +0200
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for 127.0.0.1 at 2015-07-13 10:43:03 +0200
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for 127.0.0.1 at 2015-07-13 10:43:03 +0200
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for 127.0.0.1 at 2015-07-13 10:43:03 +0200
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for 127.0.0.1 at 2015-07-13 10:43:03 +0200
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for 127.0.0.1 at 2015-07-13 10:43:03 +0200
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for 127.0.0.1 at 2015-07-13 10:43:03 +0200
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for 127.0.0.1 at 2015-07-13 10:43:03 +0200
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for 127.0.0.1 at 2015-07-13 10:43:03 +0200
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for 127.0.0.1 at 2015-07-13 10:43:03 +0200
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for 127.0.0.1 at 2015-07-13 10:43:03 +0200
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for 127.0.0.1 at 2015-07-13 10:43:03 +0200
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for 127.0.0.1 at 2015-07-13 10:43:03 +0200
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-07-13 10:43:03 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-07-13 10:43:03 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-07-13 10:43:03 +0200
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-13 10:43:03 +0200
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-13 10:43:03 +0200
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-07-13 10:43:03 +0200
+
+
+Started GET "/books/new" for 127.0.0.1 at 2015-07-13 10:43:07 +0200
+Processing by BooksController#new as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered books/_form.html.slim (48.3ms)
+  Rendered books/new.html.slim within layouts/application (55.9ms)
+Completed 200 OK in 172ms (Views: 170.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-07-13 10:43:10 +0200
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.4ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 1]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 2]]
+  Rendered authors/index.html.slim within layouts/application (16.1ms)
+Completed 200 OK in 150ms (Views: 148.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2015-07-13 10:43:11 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  Rendered books/show.html.slim within layouts/application (13.7ms)
+Completed 200 OK in 141ms (Views: 129.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2015-07-13 10:43:13 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36m (0.2ms)[0m  [1mSELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  Rendered books/_form.html.slim (8.1ms)
+  Rendered books/edit.html.slim within layouts/application (14.6ms)
+Completed 200 OK in 132ms (Views: 129.0ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2015-07-13 10:43:15 +0200
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dn4/XrkwFyVQAzsYRnujHccgXSgss7px568Ee65/wGDqfw/7BmZPALHyECU9held62nnGWyO2L1ZiSEt/RdUOQ==", "book"=>{"title"=>"How to steal rubies", "edition"=>"1", "author_ids"=>["1", ""]}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/books/1/edit
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2015-07-13 10:43:15 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35m (0.1ms)[0m  SELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered books/_form.html.slim (15.0ms)
+  Rendered books/edit.html.slim within layouts/application (18.1ms)
+Completed 200 OK in 93ms (Views: 91.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2015-07-13 10:43:17 +0200
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DakkBr95r9KfpxlsPACpePVOUgUuLgdIXY7WnKVUyzbpqBSjAC/3935WMlFH/uM42QfoNG4TZYTjqPPK9jxfbw==", "book"=>{"title"=>"How to steal rubies", "edition"=>"1", "author_ids"=>["1", ""]}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35m (0.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/books/1/edit
+Completed 302 Found in 9ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2015-07-13 10:43:17 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36m (0.1ms)[0m  [1mSELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  Rendered books/_form.html.slim (4.3ms)
+  Rendered books/edit.html.slim within layouts/application (5.0ms)
+Completed 200 OK in 90ms (Views: 89.0ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2015-07-13 10:43:21 +0200
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iDN7tHJS+P7STnfbTE+OFt+me0mdBMBcWawkuMUB84VsMksRzQSg2zO/XOY3scRW8+/BeN05opDnigHulmln3A==", "book"=>{"title"=>"How to steal rubies", "edition"=>"1", "author_ids"=>["1", "2", ""]}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" IN (1, 2)[0m
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "authors_books" ("book_id", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 1], ["author_id", 2], ["created_at", "2015-07-13 08:43:21.262049"], ["updated_at", "2015-07-13 08:43:21.262049"]]
+  [1m[35m (114.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/books/1/edit
+Completed 302 Found in 132ms (ActiveRecord: 115.4ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2015-07-13 10:43:21 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36m (0.1ms)[0m  [1mSELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  Rendered books/_form.html.slim (7.4ms)
+  Rendered books/edit.html.slim within layouts/application (8.6ms)
+Completed 200 OK in 117ms (Views: 115.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-07-13 10:43:48 +0200
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 1]]
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 2]]
+  Rendered authors/index.html.slim within layouts/application (5.6ms)
+Completed 200 OK in 112ms (Views: 110.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2015-07-13 10:43:49 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered books/show.html.slim within layouts/application (3.5ms)
+Completed 200 OK in 153ms (Views: 150.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-07-13 10:43:51 +0200
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.4ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 1]]
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 2]]
+  Rendered authors/index.html.slim within layouts/application (7.8ms)
+Completed 200 OK in 120ms (Views: 117.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2015-07-13 10:43:53 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  Rendered books/show.html.slim within layouts/application (1.6ms)
+Completed 200 OK in 104ms (Views: 102.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2015-07-13 10:43:56 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36m (0.1ms)[0m  [1mSELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  Rendered books/_form.html.slim (6.8ms)
+  Rendered books/edit.html.slim within layouts/application (7.8ms)
+Completed 200 OK in 130ms (Views: 128.0ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2015-07-13 10:43:59 +0200
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NXmGtuDcMQdmxWi/mn0stgCTkobr0FVRZCAjBENs2H7ReLYTX4ppIoc0Q4Lhg2b2LNoot6vtN53aBgZSEARMJw==", "book"=>{"title"=>"How to steal rubies", "edition"=>"1", "author_ids"=>["1", ""]}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "authors_books" WHERE "authors_books"."book_id" = ? AND "authors_books"."author_id" = 2[0m  [["book_id", 1]]
+  [1m[35m (243.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/books/1/edit
+Completed 302 Found in 251ms (ActiveRecord: 244.2ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2015-07-13 10:43:59 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.4ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36m (0.1ms)[0m  [1mSELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  Rendered books/_form.html.slim (7.6ms)
+  Rendered books/edit.html.slim within layouts/application (8.7ms)
+Completed 200 OK in 122ms (Views: 119.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2015-07-13 10:44:58 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36m (0.1ms)[0m  [1mSELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  Rendered books/_form.html.slim (7.6ms)
+  Rendered books/edit.html.slim within layouts/application (8.3ms)
+Completed 200 OK in 115ms (Views: 113.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-6eb9f3d6cf2c2d07f133cee9aa463cb3bd4f40804a61c16de2d8f374961a7baf.css?body=1" for 127.0.0.1 at 2015-07-13 10:44:58 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-07-13 10:44:58 +0200
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for 127.0.0.1 at 2015-07-13 10:44:58 +0200
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for 127.0.0.1 at 2015-07-13 10:44:58 +0200
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for 127.0.0.1 at 2015-07-13 10:44:58 +0200
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for 127.0.0.1 at 2015-07-13 10:44:58 +0200
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for 127.0.0.1 at 2015-07-13 10:44:58 +0200
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for 127.0.0.1 at 2015-07-13 10:44:58 +0200
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for 127.0.0.1 at 2015-07-13 10:44:58 +0200
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for 127.0.0.1 at 2015-07-13 10:44:58 +0200
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for 127.0.0.1 at 2015-07-13 10:44:58 +0200
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for 127.0.0.1 at 2015-07-13 10:44:58 +0200
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for 127.0.0.1 at 2015-07-13 10:44:58 +0200
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for 127.0.0.1 at 2015-07-13 10:44:58 +0200
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-07-13 10:44:58 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-07-13 10:44:58 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-07-13 10:44:58 +0200
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-13 10:44:58 +0200
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-13 10:44:58 +0200
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-07-13 10:44:58 +0200
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2015-07-13 10:46:28 +0200
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KuaWt1dlOOpY2WWDBNV6vIE3VSAtY2LzQOewHvkE/JjO56YS6DNgz7koTr5/KzD8rX7vEW1eAD/+wZVIqmxowQ==", "book"=>{"title"=>"How to steal rubies", "edition"=>"", "author_ids"=>["1", ""]}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered books/_form.html.slim (6.7ms)
+  Rendered books/edit.html.slim within layouts/application (7.5ms)
+Completed 200 OK in 113ms (Views: 102.6ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2015-07-13 10:46:35 +0200
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZU/vLBU6NddmZ062RG3dtYPt9DzefCZEHnNbS2bgIFRlA8ZDwKw8rxotgei7/02+kYN4bNEklWuX+g7fvMU2A==", "book"=>{"title"=>"How to steal rubies", "edition"=>"9", "author_ids"=>["1", ""]}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "books" SET "edition" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["edition", 9], ["updated_at", "2015-07-13 08:46:35.850024"], ["id", 1]]
+  [1m[35m (278.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 287ms (ActiveRecord: 279.4ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2015-07-13 10:46:36 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  Rendered books/show.html.slim within layouts/application (12.5ms)
+Completed 200 OK in 125ms (Views: 123.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-07-13 10:46:39 +0200
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 2]]
+  Rendered authors/index.html.slim within layouts/application (5.6ms)
+Completed 200 OK in 108ms (Views: 106.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/authors/1/edit" for 127.0.0.1 at 2015-07-13 10:46:44 +0200
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  [1m[35m (0.1ms)[0m  SELECT "books".id FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "books".id FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "books".id FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 1]]
+  Rendered authors/_form.html.slim (15.4ms)
+  Rendered authors/edit.html.slim within layouts/application (18.7ms)
+Completed 200 OK in 108ms (Views: 106.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-07-13 10:46:48 +0200
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.4ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 2]]
+  Rendered authors/index.html.slim within layouts/application (6.2ms)
+Completed 200 OK in 122ms (Views: 119.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2015-07-13 10:47:21 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered books/show.html.slim within layouts/application (1.1ms)
+Completed 200 OK in 79ms (Views: 78.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2015-07-13 10:47:23 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.4ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35m (0.2ms)[0m  SELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered books/_form.html.slim (12.1ms)
+  Rendered books/edit.html.slim within layouts/application (14.2ms)
+Completed 200 OK in 157ms (Views: 154.5ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2015-07-13 10:47:31 +0200
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GB9HylU0+5zoeN1lehyiYiX41MROTh4HC9grbDIIcDT8Hndv6mKjuQmJ9lgB4ugiCbFu9Q5zfMu1/g46YWDkbQ==", "book"=>{"title"=>"How to steal rubies", "edition"=>"9", "author_ids"=>["1", "2", ""]}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" IN (1, 2)
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "authors_books" ("book_id", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["book_id", 1], ["author_id", 2], ["created_at", "2015-07-13 08:47:31.610313"], ["updated_at", "2015-07-13 08:47:31.610313"]]
+  [1m[36m (147.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/books/1/edit
+Completed 302 Found in 154ms (ActiveRecord: 147.6ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2015-07-13 10:47:31 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35m (0.1ms)[0m  SELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered books/_form.html.slim (8.1ms)
+  Rendered books/edit.html.slim within layouts/application (9.2ms)
+Completed 200 OK in 127ms (Views: 124.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-07-13 10:47:33 +0200
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 1]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 2]]
+  Rendered authors/index.html.slim within layouts/application (4.9ms)
+Completed 200 OK in 95ms (Views: 93.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 15:06:49 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 1]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 2]]
+  Rendered authors/index.html.slim within layouts/application (49.1ms)
+Completed 200 OK in 328ms (Views: 314.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2015-07-13 15:06:59 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.4ms)[0m  SELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  Rendered books/show.html.slim within layouts/application (22.5ms)
+Completed 200 OK in 219ms (Views: 208.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2015-07-13 15:07:01 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36m (0.2ms)[0m  [1mSELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  Rendered books/_form.html.slim (43.4ms)
+  Rendered books/edit.html.slim within layouts/application (56.2ms)
+Completed 200 OK in 153ms (Views: 149.4ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2015-07-13 15:07:04 +0200
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W4ORJ/joCFO6vFjuzQbvE5vjkTHsLd60CbMkyzAr+xy/gqGCR75QdltNc9O2+KVTt6orAKwQvHi3lQGdY0NvRQ==", "book"=>{"title"=>"How to steal rubies", "edition"=>"9", "author_ids"=>["1", ""]}, "commit"=>"Update Book", "id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `authors' for nil:NilClass):
+  app/controllers/books_controller.rb:24:in `update'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (17.1ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.2/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (33.6ms)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2015-07-13 15:14:36 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W4ORJ/joCFO6vFjuzQbvE5vjkTHsLd60CbMkyzAr+xy/gqGCR75QdltNc9O2+KVTt6orAKwQvHi3lQGdY0NvRQ==", "book"=>{"title"=>"How to steal rubies", "edition"=>"9", "author_ids"=>["1", ""]}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "authors_books" WHERE "authors_books"."book_id" = ? AND "authors_books"."author_id" = 2[0m  [["book_id", 1]]
+  [1m[35m (138.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/books/1/edit
+Completed 302 Found in 196ms (ActiveRecord: 140.2ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2015-07-13 15:14:37 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36m (0.1ms)[0m  [1mSELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  Rendered books/_form.html.slim (26.2ms)
+  Rendered books/edit.html.slim within layouts/application (54.8ms)
+Completed 200 OK in 319ms (Views: 316.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-6eb9f3d6cf2c2d07f133cee9aa463cb3bd4f40804a61c16de2d8f374961a7baf.css?body=1" for 127.0.0.1 at 2015-07-13 15:14:37 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-07-13 15:14:37 +0200
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for 127.0.0.1 at 2015-07-13 15:14:37 +0200
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for 127.0.0.1 at 2015-07-13 15:14:37 +0200
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for 127.0.0.1 at 2015-07-13 15:14:37 +0200
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for 127.0.0.1 at 2015-07-13 15:14:37 +0200
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for 127.0.0.1 at 2015-07-13 15:14:37 +0200
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for 127.0.0.1 at 2015-07-13 15:14:37 +0200
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for 127.0.0.1 at 2015-07-13 15:14:37 +0200
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for 127.0.0.1 at 2015-07-13 15:14:37 +0200
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for 127.0.0.1 at 2015-07-13 15:14:37 +0200
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for 127.0.0.1 at 2015-07-13 15:14:37 +0200
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for 127.0.0.1 at 2015-07-13 15:14:37 +0200
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for 127.0.0.1 at 2015-07-13 15:14:37 +0200
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-07-13 15:14:37 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-07-13 15:14:37 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-07-13 15:14:37 +0200
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-13 15:14:37 +0200
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-13 15:14:37 +0200
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-07-13 15:14:37 +0200
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2015-07-13 15:14:41 +0200
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QzLOxxoZM6vrldpZrLLwua4sdVoVvMTFytV2T3ngAd2nM/5ipU9rjgpk8WTXTLr5gmXPa1WBpgl081MZKoiVhA==", "book"=>{"title"=>"How to steal rubies", "edition"=>"9", "author_ids"=>["1", "2", ""]}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" IN (1, 2)
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "authors_books" ("book_id", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["book_id", 1], ["author_id", 2], ["created_at", "2015-07-13 13:14:41.162122"], ["updated_at", "2015-07-13 13:14:41.162122"]]
+  [1m[36m (197.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/books/1/edit
+Completed 302 Found in 221ms (ActiveRecord: 198.0ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2015-07-13 15:14:41 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35m (0.1ms)[0m  SELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered books/_form.html.slim (5.8ms)
+  Rendered books/edit.html.slim within layouts/application (6.6ms)
+Completed 200 OK in 102ms (Views: 100.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2015-07-13 15:15:29 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered books/show.html.slim within layouts/application (20.8ms)
+Completed 200 OK in 125ms (Views: 114.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2015-07-13 15:15:29 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered books/show.html.slim within layouts/application (1.2ms)
+Completed 200 OK in 91ms (Views: 90.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2015-07-13 15:15:31 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35m (0.1ms)[0m  SELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered books/_form.html.slim (10.2ms)
+  Rendered books/edit.html.slim within layouts/application (13.9ms)
+Completed 200 OK in 95ms (Views: 93.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2015-07-13 15:15:34 +0200
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0AAa51EiFTBwQOF0TFw0ZPpmG0NCbm8KfxBmhG90SCk0ASpC7nRNFZGxykk3on4k1i+hcgJTDcbBNkPSPBzccA==", "book"=>{"title"=>"How to steal rubies", "edition"=>"9", "author_ids"=>["1", ""]}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "authors_books" WHERE "authors_books"."book_id" = ? AND "authors_books"."author_id" = 2[0m  [["book_id", 1]]
+  [1m[35m (198.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/books/1/edit
+Completed 302 Found in 207ms (ActiveRecord: 199.2ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2015-07-13 15:15:34 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36m (0.1ms)[0m  [1mSELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  Rendered books/_form.html.slim (5.0ms)
+  Rendered books/edit.html.slim within layouts/application (5.7ms)
+Completed 200 OK in 112ms (Views: 109.8ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2015-07-13 15:16:36 +0200
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LdX/bKEfdFYB9T2uRK40uEopkYn3LumTHpSbOAZi5fDJ1M/JHkksc+AEFpM/UH74ZmAruLcTi1+gsr5uVQpxqQ==", "book"=>{"title"=>"How to steal rubies", "edition"=>"9", "author_ids"=>["1", ""]}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/books/1/edit
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2015-07-13 15:16:36 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36m (0.1ms)[0m  [1mSELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  Rendered books/_form.html.slim (4.1ms)
+  Rendered books/edit.html.slim within layouts/application (4.6ms)
+Completed 200 OK in 84ms (Views: 83.1ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2015-07-13 15:17:03 +0200
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZtP64rs5Zw0J6LZVZOPQHLN4Wc20XR3vzpAFxxDOzguC0spHBG8/KOgZnWgfHZpcnzHj/PRgfyNwtiCRQ6ZaUg==", "book"=>{"title"=>"How to steal rubies", "edition"=>"9", "author_ids"=>["1", ""]}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/books/1/edit
+Completed 302 Found in 23ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2015-07-13 15:17:03 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36m (0.1ms)[0m  [1mSELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  Rendered books/_form.html.slim (4.8ms)
+  Rendered books/edit.html.slim within layouts/application (5.3ms)
+Completed 200 OK in 96ms (Views: 95.0ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2015-07-13 15:17:05 +0200
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"blU88qgnOQPbToFwoof9iOMgkiVD1jsoYFc6pA7mMWOKVAxXF3FhJjq/qk3ZebfIz2koFAPrWeTecR/yXY6lOg==", "book"=>{"title"=>"How to steal rubies", "edition"=>"9", "author_ids"=>["1", "2", ""]}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" IN (1, 2)
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "authors_books" ("book_id", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["book_id", 1], ["author_id", 2], ["created_at", "2015-07-13 13:17:05.404540"], ["updated_at", "2015-07-13 13:17:05.404540"]]
+  [1m[36m (201.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/books/1/edit
+Completed 302 Found in 222ms (ActiveRecord: 203.2ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2015-07-13 15:17:05 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35m (0.2ms)[0m  SELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered books/_form.html.slim (9.6ms)
+  Rendered books/edit.html.slim within layouts/application (11.2ms)
+Completed 200 OK in 123ms (Views: 120.6ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2015-07-13 15:17:18 +0200
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LIqvVSCNWm5vBatHfZX9Y+1VzAdtRePIGqXtMabca5jIi5/wn9sCS470gHoGa7cjwRx2Ni14gQSkg8hn9bT/wQ==", "book"=>{"title"=>"How to steal rubies", "edition"=>"9", "author_ids"=>["1", "2", ""]}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mAuthor Load (0.4ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" IN (1, 2)[0m
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/books/1/edit
+Completed 302 Found in 13ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2015-07-13 15:17:18 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35m (0.1ms)[0m  SELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered books/_form.html.slim (5.9ms)
+  Rendered books/edit.html.slim within layouts/application (7.4ms)
+Completed 200 OK in 102ms (Views: 99.6ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2015-07-13 15:17:28 +0200
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VMbIwAIejFVhmNFrqTKjGOGsMOx+nXJNzVyphMvIl8ewx/hlvUjUcIBp+lbSzOlYzeWK3T6gEIFzeozSmKADng==", "book"=>{"title"=>"How to steal rubies", "edition"=>"u", "author_ids"=>["1", "2", ""]}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" IN (1, 2)[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered books/_form.html.slim (3.3ms)
+  Rendered books/edit.html.slim within layouts/application (3.8ms)
+Completed 200 OK in 90ms (Views: 81.9ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2015-07-13 15:17:52 +0200
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DMEVb7xG/iyiuifyUJbVNp/j0xGzRHQFs+N3s2fvNL7owCXKAxCmCUNLDM8raJ92s6ppIPN5FskNxVLlNIeg5w==", "book"=>{"title"=>"How to steal rubies", "edition"=>"u", "author_ids"=>["1", "2", ""]}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" IN (1, 2)
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered books/_form.html.slim (3.7ms)
+  Rendered books/edit.html.slim within layouts/application (4.3ms)
+Completed 200 OK in 128ms (Views: 99.7ms | ActiveRecord: 1.9ms)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2015-07-13 15:17:56 +0200
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4HFgelNWkavma4BPaxkw9xQlLKPbDxeFxEzz+ZbRk+kEcFDf7ADJjgeaq3IQ53q3OGyWkpsydUl6atavxbkHsA==", "book"=>{"title"=>"How to steal rubies", "edition"=>"6", "author_ids"=>["1", "2", ""]}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" IN (1, 2)
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "books" SET "edition" = ?, "updated_at" = ? WHERE "books"."id" = ?  [["edition", 6], ["updated_at", "2015-07-13 13:17:56.155327"], ["id", 1]]
+  [1m[36m (261.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/books/1
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+Completed 302 Found in 270ms (ActiveRecord: 262.0ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2015-07-13 15:17:56 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  Rendered books/show.html.slim within layouts/application (7.0ms)
+Completed 200 OK in 90ms (Views: 87.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-07-13 15:18:03 +0200
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 2]]
+  Rendered authors/index.html.slim within layouts/application (17.0ms)
+Completed 200 OK in 121ms (Views: 119.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2015-07-13 15:18:07 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered books/show.html.slim within layouts/application (2.3ms)
+Completed 200 OK in 99ms (Views: 97.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2015-07-13 15:18:10 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35m (0.4ms)[0m  SELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered books/_form.html.slim (7.0ms)
+  Rendered books/edit.html.slim within layouts/application (8.0ms)
+Completed 200 OK in 100ms (Views: 98.7ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2015-07-13 15:18:12 +0200
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qs41ynSqWuMAEFygRtRTzZMgDUxmMpSphYVqu7toM/dOzwVvy/wCxuHhd509KhmNv2m3fSYP9mU7o0/t6ACnrg==", "book"=>{"title"=>"How to steal rubies", "edition"=>"6", "author_ids"=>["1", ""]}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "authors_books" WHERE "authors_books"."book_id" = ? AND "authors_books"."author_id" = 2[0m  [["book_id", 1]]
+  [1m[35m (158.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/books/1/edit
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+Completed 302 Found in 166ms (ActiveRecord: 159.2ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2015-07-13 15:18:13 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35m (0.1ms)[0m  SELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered books/_form.html.slim (5.2ms)
+  Rendered books/edit.html.slim within layouts/application (5.9ms)
+Completed 200 OK in 104ms (Views: 92.5ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2015-07-13 15:18:17 +0200
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3J4y/bpnbsidQp1ntYgQSYakJzcphYrPIkml3pGYUjk4nwJYBTE27XyztlrOdloJqu2dBmm46AOcb4CIwvDGYA==", "book"=>{"title"=>"How to steal rubies", "edition"=>"6", "author_ids"=>[""]}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "authors_books" WHERE "authors_books"."book_id" = ? AND "authors_books"."author_id" = 1  [["book_id", 1]]
+  [1m[36m (181.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/books/1/edit
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+Completed 302 Found in 193ms (ActiveRecord: 182.2ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2015-07-13 15:18:17 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36m (0.1ms)[0m  [1mSELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  Rendered books/_form.html.slim (6.2ms)
+  Rendered books/edit.html.slim within layouts/application (7.2ms)
+Completed 200 OK in 107ms (Views: 104.8ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2015-07-13 15:18:49 +0200
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y8NI8ysS4qyASSNMyE56AD1/mE3dn+ANhyJpOm64kfIvwnhWlES6iWG4CHGzsDBAETYifJ2igsE5BExsPdAFqw==", "book"=>{"title"=>"How to steal rubies", "edition"=>"6", "author_ids"=>[""]}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 20ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2015-07-13 15:18:49 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered books/show.html.slim within layouts/application (1.6ms)
+Completed 200 OK in 88ms (Views: 87.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-07-13 15:18:51 +0200
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 1]]
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 2]]
+  Rendered authors/index.html.slim within layouts/application (15.0ms)
+Completed 200 OK in 126ms (Views: 124.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/authors/new" for 127.0.0.1 at 2015-07-13 15:18:52 +0200
+Processing by AuthorsController#new as HTML
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered authors/_form.html.slim (9.9ms)
+  Rendered authors/new.html.slim within layouts/application (14.2ms)
+Completed 200 OK in 97ms (Views: 95.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-07-13 15:18:54 +0200
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 1]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 2]]
+  Rendered authors/index.html.slim within layouts/application (3.8ms)
+Completed 200 OK in 87ms (Views: 86.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/authors/1/edit" for 127.0.0.1 at 2015-07-13 15:18:56 +0200
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books"
+  [1m[36m (0.1ms)[0m  [1mSELECT "books".id FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "books".id FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "books".id FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 1]]
+  Rendered authors/_form.html.slim (5.6ms)
+  Rendered authors/edit.html.slim within layouts/application (10.0ms)
+Completed 200 OK in 100ms (Views: 98.1ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/authors/1" for 127.0.0.1 at 2015-07-13 15:19:02 +0200
+Processing by AuthorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZKFk8cUSIWQOOCf9G4RZ2ZS5bywGNUEC5hxjGRi3PkOAoFRUekR5Qe/JDMBgehOZuPDVHUYII85YOkZPS9+qGg==", "author"=>{"name"=>"trep", "surname"=>"Twain", "book_ids"=>["1", ""]}, "commit"=>"Update Author", "id"=>"1"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 1]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "authors_books" ("author_id", "book_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["author_id", 1], ["book_id", 1], ["created_at", "2015-07-13 13:19:02.031517"], ["updated_at", "2015-07-13 13:19:02.031517"]]
+  [1m[36m (168.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/authors/1
+Completed 302 Found in 180ms (ActiveRecord: 169.0ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2015-07-13 15:19:02 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 1]]
+  Rendered authors/show.html.slim within layouts/application (5.7ms)
+Completed 200 OK in 87ms (Views: 84.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/authors/1/edit" for 127.0.0.1 at 2015-07-13 15:19:04 +0200
+Processing by AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  [1m[35m (0.1ms)[0m  SELECT "books".id FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "books".id FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "books".id FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 1]]
+  Rendered authors/_form.html.slim (8.7ms)
+  Rendered authors/edit.html.slim within layouts/application (10.5ms)
+Completed 200 OK in 123ms (Views: 120.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-07-13 15:19:05 +0200
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.4ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 1]]
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 2]]
+  Rendered authors/index.html.slim within layouts/application (9.0ms)
+Completed 200 OK in 122ms (Views: 120.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2015-07-13 15:19:07 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered books/show.html.slim within layouts/application (1.8ms)
+Completed 200 OK in 109ms (Views: 107.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2015-07-13 15:19:08 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35m (0.2ms)[0m  SELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered books/_form.html.slim (5.5ms)
+  Rendered books/edit.html.slim within layouts/application (6.5ms)
+Completed 200 OK in 93ms (Views: 91.5ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2015-07-13 15:19:12 +0200
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/YgbZD9IKpSkcfuYA1NWj2lxTOVjY3WFBb7AlJl0AjkZiSvBgB5ysUWA0KV4rRzPRTj21CNeF0m7mOXCyhyWYA==", "book"=>{"title"=>"How to steal rubies", "edition"=>"6", "author_ids"=>["1", ""]}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2015-07-13 15:19:13 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered books/show.html.slim within layouts/application (1.1ms)
+Completed 200 OK in 83ms (Views: 82.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2015-07-13 15:19:16 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35m (0.1ms)[0m  SELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered books/_form.html.slim (7.8ms)
+  Rendered books/edit.html.slim within layouts/application (9.6ms)
+Completed 200 OK in 133ms (Views: 131.1ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2015-07-13 15:19:18 +0200
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CUWRkgZSEaGRQjWZWOQ8jRi6SqFh1VRiK10Vvyten8rtRKE3uQRJhHCzHqQjGnbNNPPwkCHoNq6VezDpeDYLkw==", "book"=>{"title"=>"How to steal rubies", "edition"=>"6", "author_ids"=>["1", "2", ""]}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" IN (1, 2)[0m
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "authors_books" ("book_id", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 1], ["author_id", 2], ["created_at", "2015-07-13 13:19:18.330167"], ["updated_at", "2015-07-13 13:19:18.330167"]]
+  [1m[35m (184.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 194ms (ActiveRecord: 185.7ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2015-07-13 15:19:18 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  Rendered books/show.html.slim within layouts/application (2.4ms)
+Completed 200 OK in 114ms (Views: 111.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-07-13 15:19:58 +0200
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.5ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 2]]
+  Rendered authors/index.html.slim within layouts/application (23.4ms)
+Completed 200 OK in 117ms (Views: 110.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/books/2" for 127.0.0.1 at 2015-07-13 15:20:00 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mBook Load (0.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 2]]
+  Rendered books/show.html.slim within layouts/application (7.2ms)
+Completed 200 OK in 110ms (Views: 107.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-07-13 15:20:02 +0200
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 1]]
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 2]]
+  Rendered authors/index.html.slim within layouts/application (5.7ms)
+Completed 200 OK in 123ms (Views: 121.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2015-07-13 15:20:04 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  Rendered books/show.html.slim within layouts/application (1.8ms)
+Completed 200 OK in 96ms (Views: 94.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2015-07-13 15:20:04 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36m (0.1ms)[0m  [1mSELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  Rendered books/_form.html.slim (6.6ms)
+  Rendered books/edit.html.slim within layouts/application (7.7ms)
+Completed 200 OK in 110ms (Views: 108.6ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2015-07-13 15:20:07 +0200
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Bw9nXWpmnZSTpCN/S2Vq7N2Zqnc0kkJRSEBhUb27JI0HQ04yv/CU7O/u7CG09/rnz/cmJzvK8X7ByTTFZ54yw==", "book"=>{"title"=>"How to steal rubies", "edition"=>"6", "author_ids"=>["1", ""]}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "authors_books" WHERE "authors_books"."book_id" = ? AND "authors_books"."author_id" = 2[0m  [["book_id", 1]]
+  [1m[35m (144.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 152ms (ActiveRecord: 145.3ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2015-07-13 15:20:07 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  Rendered books/show.html.slim within layouts/application (1.5ms)
+Completed 200 OK in 89ms (Views: 87.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-07-13 15:20:10 +0200
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 2]]
+  Rendered authors/index.html.slim within layouts/application (3.8ms)
+Completed 200 OK in 97ms (Views: 96.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2015-07-13 15:20:11 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered books/show.html.slim within layouts/application (2.1ms)
+Completed 200 OK in 111ms (Views: 109.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2015-07-13 15:20:12 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35m (0.1ms)[0m  SELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".id FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered books/_form.html.slim (4.5ms)
+  Rendered books/edit.html.slim within layouts/application (5.1ms)
+Completed 200 OK in 92ms (Views: 90.9ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/books/1" for 127.0.0.1 at 2015-07-13 15:20:14 +0200
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MIoh8Exam3yCk0ZXN5V4gAjQaJlA97pSoCUumd2DHInUixFV8wzDWWNibWpMazLAJJnSqADK2J4eAwvPjuuI0A==", "book"=>{"title"=>"How to steal rubies", "edition"=>"6", "author_ids"=>["1", ""]}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2015-07-13 15:20:14 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 1]]
+  Rendered books/show.html.slim within layouts/application (1.3ms)
+Completed 200 OK in 93ms (Views: 92.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-07-13 15:20:16 +0200
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.4ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 2]]
+  Rendered authors/index.html.slim within layouts/application (6.9ms)
+Completed 200 OK in 111ms (Views: 109.6ms | ActiveRecord: 0.7ms)
