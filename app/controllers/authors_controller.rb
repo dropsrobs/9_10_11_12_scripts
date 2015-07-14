@@ -33,7 +33,7 @@ class AuthorsController < ApplicationController
   def destroy
     @author = Author.find(params[:id])
     @author.books.each do |book|
-      book.destroy if book.authors.count == 1
+      book.destroy if book.has_single_author?
     end
     @author.destroy
 

@@ -7,4 +7,8 @@ class Book < ActiveRecord::Base
   def name_with_initial
     "#{title}, #{edition}. edition"
   end
+
+  def has_single_author?
+    self.authors.count == 1 ? true : false
+  end
 end
