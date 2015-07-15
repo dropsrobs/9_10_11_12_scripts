@@ -1,6 +1,7 @@
 class AuthorsController < ApplicationController
+  before_action :fetch_author, only: %i(show edit update destroy)
+
   def show
-    @author = Author.find(params[:id])
   end
 
   def new
@@ -17,12 +18,9 @@ class AuthorsController < ApplicationController
   end
 
   def edit
-    @author = Author.find(params[:id])
   end
 
   def update
-    @author = Author.find(params[:id])
-
     if @author.update(author_params)
       redirect_to @author
     else
@@ -31,9 +29,8 @@ class AuthorsController < ApplicationController
   end
 
   def destroy
-    @author = Author.find(params[:id])
     @author.books.each do |book|
-      book.destroy if book.has_single_author?
+      book.destroy if book.single_author?
     end
     @author.destroy
 
@@ -48,5 +45,9 @@ class AuthorsController < ApplicationController
 
   def author_params
     params.require(:author).permit(:name, :surname, book_ids: [])
+  end
+
+  def fetch_author
+    @author = Author.find(params[:id])
   end
 end

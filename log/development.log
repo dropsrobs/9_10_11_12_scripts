@@ -37745,3 +37745,412 @@ Processing by AuthorsController#index as HTML
   [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 2]]
   Rendered authors/index.html.slim within layouts/application (3.1ms)
 Completed 200 OK in 84ms (Views: 83.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-07-15 10:35:12 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 1]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 2]]
+  Rendered authors/index.html.slim within layouts/application (45.1ms)
+Completed 200 OK in 3070ms (Views: 3056.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/authors/new" for 127.0.0.1 at 2015-07-15 10:35:21 +0200
+Processing by AuthorsController#new as HTML
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered authors/_form.html.slim (42.9ms)
+  Rendered authors/new.html.slim within layouts/application (57.2ms)
+Completed 200 OK in 136ms (Views: 134.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/authors" for 127.0.0.1 at 2015-07-15 10:35:33 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0UO7bzEcOLFsc9Uy56rhDRvhXOXSeKs/CF9DvVLoDGfFBHmDbiEAlZRJd9b64XYz+ZTWUhfOnOK42JEO2xOvHw==", "author"=>{"name"=>"Hi there", "surname"=>"Paraa", "book_ids"=>["5", ""]}, "commit"=>"Create Author"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "authors" ("name", "surname", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Hi there"], ["surname", "Paraa"], ["created_at", "2015-07-15 08:35:33.540617"], ["updated_at", "2015-07-15 08:35:33.540617"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "authors_books" ("book_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["book_id", 5], ["created_at", "2015-07-15 08:35:33.542044"], ["updated_at", "2015-07-15 08:35:33.542044"]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "authors_books" SET "author_id" = ?, "updated_at" = ? WHERE "authors_books"."id" = ?  [["author_id", 5], ["updated_at", "2015-07-15 08:35:33.543257"], ["id", 13]]
+  [1m[36m (189.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/authors/5
+Completed 302 Found in 212ms (ActiveRecord: 190.8ms)
+
+
+Started GET "/authors/5" for 127.0.0.1 at 2015-07-15 10:35:33 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"5"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `fetch_author' for #<AuthorsController:0x007fd35c76b100>):
+  activesupport (4.2.2) lib/active_support/callbacks.rb:432:in `block in make_lambda'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:145:in `call'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:145:in `block in halting_and_conditional'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:504:in `block in call'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:504:in `each'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.2) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.2) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.2) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.2) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.2) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.2) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.2) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.2) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.2) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.2) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.2) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.2) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.2) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.2) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/robert/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/robert/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/robert/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (24.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (40.1ms)
+
+
+Started GET "/authors/5" for 127.0.0.1 at 2015-07-15 10:36:32 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 5]]
+  Rendered authors/show.html.slim within layouts/application (18.4ms)
+Completed 200 OK in 118ms (Views: 109.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.self-97b2e3f1c940e570dfc7444bfe4e8ef96512c2cc6bda366a4b05f21649b2ed52.css?body=1" for 127.0.0.1 at 2015-07-15 10:36:32 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-07-15 10:36:32 +0200
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for 127.0.0.1 at 2015-07-15 10:36:32 +0200
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for 127.0.0.1 at 2015-07-15 10:36:32 +0200
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for 127.0.0.1 at 2015-07-15 10:36:32 +0200
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for 127.0.0.1 at 2015-07-15 10:36:32 +0200
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for 127.0.0.1 at 2015-07-15 10:36:32 +0200
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for 127.0.0.1 at 2015-07-15 10:36:32 +0200
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for 127.0.0.1 at 2015-07-15 10:36:32 +0200
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for 127.0.0.1 at 2015-07-15 10:36:32 +0200
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for 127.0.0.1 at 2015-07-15 10:36:32 +0200
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for 127.0.0.1 at 2015-07-15 10:36:32 +0200
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for 127.0.0.1 at 2015-07-15 10:36:32 +0200
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for 127.0.0.1 at 2015-07-15 10:36:32 +0200
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-07-15 10:36:32 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-07-15 10:36:32 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-07-15 10:36:32 +0200
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-15 10:36:32 +0200
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-15 10:36:32 +0200
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-07-15 10:36:32 +0200
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-07-15 10:36:34 +0200
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 1]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 2]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 5]]
+  Rendered authors/index.html.slim within layouts/application (21.2ms)
+Completed 200 OK in 140ms (Views: 138.1ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/authors/5" for 127.0.0.1 at 2015-07-15 10:36:37 +0200
+Processing by AuthorsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"A1RY0mOva08X4N1Dj4a+VhpbrKmOMp4HmGAUcntDM7oXE5o+PJJTa+/af6eSzSlo+C4mHkuEqdoo58bB8riQwg==", "id"=>"5"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 5]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?  [["book_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "authors" WHERE "authors"."id" = ?  [["id", 5]]
+  [1m[36m (266.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/authors
+Completed 302 Found in 276ms (ActiveRecord: 266.7ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-07-15 10:36:37 +0200
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.9ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 1]]
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 2]]
+  Rendered authors/index.html.slim within layouts/application (7.4ms)
+Completed 200 OK in 126ms (Views: 124.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-07-15 10:39:52 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 1]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 2]]
+  Rendered authors/index.html.slim within layouts/application (44.5ms)
+Completed 200 OK in 286ms (Views: 272.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-97b2e3f1c940e570dfc7444bfe4e8ef96512c2cc6bda366a4b05f21649b2ed52.css?body=1" for 127.0.0.1 at 2015-07-15 10:39:52 +0200
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-07-15 10:39:52 +0200
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for 127.0.0.1 at 2015-07-15 10:39:52 +0200
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for 127.0.0.1 at 2015-07-15 10:39:52 +0200
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for 127.0.0.1 at 2015-07-15 10:39:52 +0200
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for 127.0.0.1 at 2015-07-15 10:39:52 +0200
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for 127.0.0.1 at 2015-07-15 10:39:52 +0200
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for 127.0.0.1 at 2015-07-15 10:39:52 +0200
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for 127.0.0.1 at 2015-07-15 10:39:52 +0200
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for 127.0.0.1 at 2015-07-15 10:39:52 +0200
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for 127.0.0.1 at 2015-07-15 10:39:52 +0200
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for 127.0.0.1 at 2015-07-15 10:39:52 +0200
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for 127.0.0.1 at 2015-07-15 10:39:52 +0200
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for 127.0.0.1 at 2015-07-15 10:39:52 +0200
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-07-15 10:39:52 +0200
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-07-15 10:39:52 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-07-15 10:39:52 +0200
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-15 10:39:52 +0200
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-15 10:39:52 +0200
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-07-15 10:39:52 +0200
+
+
+Started GET "/authors/new" for 127.0.0.1 at 2015-07-15 10:40:01 +0200
+Processing by AuthorsController#new as HTML
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered authors/_form.html.slim (55.0ms)
+  Rendered authors/new.html.slim within layouts/application (71.5ms)
+Completed 200 OK in 180ms (Views: 176.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/authors" for 127.0.0.1 at 2015-07-15 10:42:00 +0200
+Processing by AuthorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hgVSmJTz3tk2rG4p2FnwFfBbl4VkJ368qpsYUbnEPhiSQpB0y87m/c6WzM3FEmcrEi4dMqGRSWEaHMriMD+dYA==", "author"=>{"name"=>"Mark", "surname"=>"Parks", "book_ids"=>[""]}, "commit"=>"Create Author"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "authors" ("name", "surname", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mark"], ["surname", "Parks"], ["created_at", "2015-07-15 08:42:00.906537"], ["updated_at", "2015-07-15 08:42:00.906537"]]
+  [1m[35m (243.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/authors/6
+Completed 302 Found in 248ms (ActiveRecord: 244.0ms)
+
+
+Started GET "/authors/6" for 127.0.0.1 at 2015-07-15 10:42:01 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 6]]
+  Rendered authors/show.html.slim within layouts/application (5.2ms)
+Completed 200 OK in 85ms (Views: 80.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-07-15 10:42:03 +0200
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 2]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 6]]
+  Rendered authors/index.html.slim within layouts/application (17.0ms)
+Completed 200 OK in 140ms (Views: 138.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/authors/new" for 127.0.0.1 at 2015-07-15 10:42:04 +0200
+Processing by AuthorsController#new as HTML
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered authors/_form.html.slim (10.1ms)
+  Rendered authors/new.html.slim within layouts/application (11.8ms)
+Completed 200 OK in 128ms (Views: 126.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-07-15 10:42:13 +0200
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 1]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 2]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 6]]
+  Rendered authors/index.html.slim within layouts/application (6.7ms)
+Completed 200 OK in 103ms (Views: 101.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2015-07-15 10:42:14 +0200
+Processing by BooksController#new as HTML
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered books/_form.html.slim (21.4ms)
+  Rendered books/new.html.slim within layouts/application (27.4ms)
+Completed 200 OK in 134ms (Views: 132.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2015-07-15 10:42:23 +0200
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SSS3YLV8S9D/opYH5Y/ibRzXY9sN3c7UirebrstDNx9dY3WM6kFz9AeYNOP4xHVT/qLpbMhr+Qk6MEkdQriUZw==", "book"=>{"title"=>"ptr", "edition"=>"1", "author_ids"=>["6", ""]}, "commit"=>"Create Book"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (79.1ms)[0m  [1mINSERT INTO "books" ("title", "edition", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "ptr"], ["edition", 1], ["created_at", "2015-07-15 08:42:23.475432"], ["updated_at", "2015-07-15 08:42:23.475432"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "authors_books" ("author_id", "created_at", "updated_at") VALUES (?, ?, ?)  [["author_id", 6], ["created_at", "2015-07-15 08:42:23.555922"], ["updated_at", "2015-07-15 08:42:23.555922"]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "authors_books" SET "book_id" = ?, "updated_at" = ? WHERE "authors_books"."id" = ?[0m  [["book_id", 7], ["updated_at", "2015-07-15 08:42:23.557157"], ["id", 14]]
+  [1m[35m (263.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/authors
+Completed 302 Found in 358ms (ActiveRecord: 343.3ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-07-15 10:42:23 +0200
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.4ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 1]]
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 2]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 6]]
+  Rendered authors/index.html.slim within layouts/application (11.4ms)
+Completed 200 OK in 122ms (Views: 119.3ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/authors/6" for 127.0.0.1 at 2015-07-15 10:42:29 +0200
+Processing by AuthorsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"F1mItB7WJ5RT23fjY/iXMv+nWPbyymBfdgNYtyKywksDHkpYQesfsKvh1Qd+swAMHdLSQTd8V4LGhIoEq0lhMw==", "id"=>"6"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 6]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 7]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 7]]
+  [1m[35m (313.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "authors" WHERE "authors"."id" = ?  [["id", 6]]
+  [1m[36m (110.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/authors
+Completed 302 Found in 432ms (ActiveRecord: 424.8ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-07-15 10:42:29 +0200
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.4ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 1]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?  [["author_id", 2]]
+  Rendered authors/index.html.slim within layouts/application (7.3ms)
+Completed 200 OK in 130ms (Views: 128.4ms | ActiveRecord: 0.8ms)

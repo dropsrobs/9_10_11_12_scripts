@@ -8,7 +8,7 @@ class Book < ActiveRecord::Base
     "#{title}, #{edition}. edition"
   end
 
-  def has_single_author?
-    self.authors.count == 1 ? true : false
+  def single_author?
+    authors.count == 1 ? true : false
   end
 end
