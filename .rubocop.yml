@@ -8,5 +8,9 @@ AllCops:
     - 'db/schema.rb'
     - 'db/seeds.rb'
     - 'Rakefile'
+
 Documentation:
   Enabled: false
+
+Metrics/LineLength:
+  Max: 120 

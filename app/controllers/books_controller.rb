@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
-  before_action :fetch_book, %i(show edit update
-)
+  before_action :fetch_book, only: %i(show edit update)
+
   def show
   end
 
@@ -32,5 +32,9 @@ class BooksController < ApplicationController
 
   def book_params
     params.require(:book).permit(:title, :edition, author_ids: [])
+  end
+
+  def fetch_book
+    @book = Book.find(params[:id])
   end
 end
