@@ -1,0 +1,28 @@
+= form_for @author do |f|
+  div class='col-xs-6'
+    - if @author.errors.any?
+      h2 Saving prohibited because of
+      = pluralize(@author.errors.count, 'error')
+      ul
+        - @author.errors.full_messages.each do |msg|
+          li = msg
+    p
+      = f.label :name
+      br
+      = f.text_field :name, class: 'form-control'
+    p
+      = f.label :surname
+      br
+      = f.text_field :surname, class: 'form-control'
+
+    p
+      = f.submit
+    = link_to 'Back', authors_path, class: 'btn btn-default'
+
+  div class='col-xs-6'
+    table class='table'
+      = collection_check_boxes(:author, :book_ids, Book.all, :id, :name_with_initial) do |book|
+        tr
+          td = book.label { book.check_box }
+          td = book.text
+end
