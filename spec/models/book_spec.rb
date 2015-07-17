@@ -17,10 +17,31 @@ RSpec.describe Book, type: :model do
     expect(FactoryGirl.create(:book)).to be_valid
   end
 
-  describe '#name_with_initial' do
-    let(:book) { FactoryGirl.build(:book, title: 'Fantasy Book', edition: 2) }
-    it 'returns book title and edition' do
-      expect(book.name_with_initial).to eq('Fantasy Book, 2. edition')
+  describe 'method' do
+    describe '#name_with_initial' do
+      let(:book) { FactoryGirl.build(:book, title: 'Fantasy Book', edition: 2) }
+      it 'returns book title and edition' do
+        expect(book.name_with_initial).to eq('Fantasy Book, 2. edition')
+      end
+    end
+
+    describe '#single_author?' do
+      let(:book) { FactoryGirl.create(:book) }
+      context 'when single author' do
+        let(:author) { FactoryGirl.create(:author) }
+        it 'returns true' do
+          book.authors << author
+          expect(book.single_author?).to be true
+        end
+      end
+
+      context 'when many authors' do
+        let(:authors) { FactoryGirl.create_list(:author, 2) }
+        it 'returns false' do
+          book.authors << authors
+          expect(book.single_author?).to be false
+        end
+      end
     end
   end
 end

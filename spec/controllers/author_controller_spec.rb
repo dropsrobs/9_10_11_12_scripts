@@ -64,7 +64,7 @@ describe AuthorsController do
   end
 
   describe 'DELETE #destroy' do
-    let(:author) { FactoryGirl.create(:author) }
+    let(:author) { FactoryGirl.create(:author, name: 'parara') }
 
     it 'deletes author' do
       author
