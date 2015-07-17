@@ -18,7 +18,7 @@ RSpec.describe Book, type: :model do
   end
 
   describe '#name_with_initial' do
-    let(:book) { FactoryGirl.create(:book, title: 'Fantasy Book', edition: 2) }
+    let(:book) { FactoryGirl.build(:book, title: 'Fantasy Book', edition: 2) }
     it 'returns book title and edition' do
       expect(book.name_with_initial).to eq('Fantasy Book, 2. edition')
     end
