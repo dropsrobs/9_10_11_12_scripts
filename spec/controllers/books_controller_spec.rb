@@ -3,7 +3,7 @@ require 'rails_helper'
 describe BooksController do
   describe 'POST #create' do
     context 'when proper parameters' do
-      let(:params) { FactoryGirl.attributes_for(:book) }
+      let(:params) { attributes_for(:book) }
 
       it 'saves new book' do
         expect { post :create, book: params }.to change(Book, :count).by(1)
@@ -16,7 +16,7 @@ describe BooksController do
     end
 
     context 'when improper parameters' do
-      let(:params) { FactoryGirl.attributes_for(:no_attr_book) }
+      let(:params) { { title: nil, edition: nil } }
 
       it 'does not save book' do
         expect { post :create, book: params }.not_to change(Book, :count)
@@ -30,11 +30,11 @@ describe BooksController do
   end
 
   describe 'PATCH #update' do
-    let(:book) { FactoryGirl.create(:book) }
+    let(:book) { create(:book) }
     before { put :update, id: book, book: params }
 
     context 'when proper parameters' do
-      let(:params) { FactoryGirl.attributes_for(:book, title: 'Washing Machines tutorial', edition: 1) }
+      let(:params) { attributes_for(:book, title: 'Washing Machines tutorial', edition: 1) }
 
       it 'updates author' do
         book.reload
@@ -48,8 +48,8 @@ describe BooksController do
     end
 
     context 'when improper parameters' do
-      let(:params) { FactoryGirl.attributes_for(:no_attr_book) }
-      let(:book) { FactoryGirl.create(:book, title: 'Washing Machines tutorial', edition: 2) }
+      let(:params) { { title: :nil, edition: :nil } }
+      let(:book) { create(:book, title: 'Washing Machines tutorial', edition: 2) }
 
       it 'does not update book' do
         book.reload

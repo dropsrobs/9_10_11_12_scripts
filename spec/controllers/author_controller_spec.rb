@@ -3,7 +3,7 @@ require 'rails_helper'
 describe AuthorsController do
   describe 'POST #create' do
     context 'when proper parameters' do
-      let(:params) { FactoryGirl.attributes_for(:author) }
+      let(:params) { attributes_for(:author) }
 
       it 'saves new author' do
         expect { post :create, author: params }.to change(Author, :count).by(1)
@@ -16,7 +16,7 @@ describe AuthorsController do
     end
 
     context 'when improper parameters' do
-      let(:params) { FactoryGirl.attributes_for(:no_attr_author) }
+      let(:params) { { name: nil, surname: nil } }
 
       it 'does not save author' do
         expect { post :create, author: params }.not_to change(Author, :count)
@@ -30,11 +30,11 @@ describe AuthorsController do
   end
 
   describe 'PATCH #update' do
-    let(:author) { FactoryGirl.create(:author) }
     before { put :update, id: author, author: params }
+    let(:author) { create(:author) }
 
     context 'when proper parameters' do
-      let(:params) { FactoryGirl.attributes_for(:author, name: 'John', surname: 'Spencer') }
+      let(:params) { { name: 'John', surname: 'Spencer'} }
 
       it 'updates author' do
         author.reload
@@ -48,8 +48,8 @@ describe AuthorsController do
     end
 
     context 'when improper parameters' do
-      let(:params) { FactoryGirl.attributes_for(:no_attr_author) }
-      let(:author) { FactoryGirl.create(:author, name: 'John', surname: 'Spencer') }
+      let(:params) { { name: nil, surname: nil } }
+      let(:author) { create(:author, name: 'John', surname: 'Spencer') }
 
       it 'does not update author' do
         author.reload
@@ -64,7 +64,7 @@ describe AuthorsController do
   end
 
   describe 'DELETE #destroy' do
-    let(:author) { FactoryGirl.create(:author, name: 'parara') }
+    let(:author) { create(:author, name: 'parara') }
 
     it 'deletes author' do
       author
@@ -72,7 +72,7 @@ describe AuthorsController do
     end
 
     context 'when book has single author' do
-      let(:book) { FactoryGirl.create(:book) }
+      let(:book) { create(:book) }
 
       it 'deletes book' do
         author.books << book

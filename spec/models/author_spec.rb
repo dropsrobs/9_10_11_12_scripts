@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Author, type: :model do
   it 'is invalid without attributes' do
-    expect(FactoryGirl.build(:no_attr_author)).not_to be_valid
+    expect(FactoryGirl.build(:author, name: nil, surname: nil)).not_to be_valid
   end
 
   it 'is invalid without surname' do
