@@ -3,7 +3,6 @@ class BooksController < ApplicationController
 
   def list
     @book = Book.all
-    puts @book.inspect
     respond_to do |format|
       format.json { render json: @book }
     end
