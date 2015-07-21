@@ -1,7 +1,16 @@
 class BooksController < ApplicationController
-  before_action :fetch_book, only: %i(show edit update)
+  before_action :fetch_book, only: %i(show edit update destroy)
+
+  def list
+    @book = Book.all
+    puts @book.inspect
+    respond_to do |format|
+      format.json { render json: @book }
+    end
+  end
 
   def show
+    answer_format
   end
 
   def new
@@ -28,6 +37,11 @@ class BooksController < ApplicationController
     end
   end
 
+  def destroy
+    @book.delete
+    render json: ''.as_json
+  end
+
   private
 
   def book_params
@@ -36,5 +50,14 @@ class BooksController < ApplicationController
 
   def fetch_book
     @book = Book.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      render json: { error: 'Book does not exist' }, status: :bad_request
+  end
+
+  def answer_format
+    respond_to do |format|
+      format.html
+      format.json { render json: @book }
+    end
   end
 end
