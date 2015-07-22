@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'authors#index'
 
-  get 'books/api/list' => 'books#list'
+  get 'books/api/list' => 'books#index'
   get 'books/api/:id' => 'books#show'
   delete 'books/api/:id' => 'books#destroy'
 

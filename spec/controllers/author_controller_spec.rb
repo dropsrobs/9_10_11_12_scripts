@@ -34,7 +34,7 @@ describe AuthorsController do
     let(:author) { create(:author) }
 
     context 'when proper parameters' do
-      let(:params) { { name: 'John', surname: 'Spencer'} }
+      let(:params) { { name: 'John', surname: 'Spencer' } }
 
       it 'updates author' do
         author.reload
