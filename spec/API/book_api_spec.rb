@@ -1,11 +1,12 @@
 require 'rails_helper'
 
-describe Book, type: :request do
+describe BooksController, type: :controller do
   describe 'Show book API' do
     let(:book) { create(:book) }
 
     context 'when proper id' do
-      before { get "/books/api/#{book.id}.json" }
+      before { get :show, id: book.id, format: :json }
+
       it 'returns 200 success code' do
         expect(response).to be_success
       end
@@ -18,7 +19,7 @@ describe Book, type: :request do
     end
 
     context 'when improper id' do
-      before { get '/books/100.json' }
+      before { get :show, id: 100 }
 
       it 'returns 400 error code' do
         expect(response).not_to be_success
@@ -35,7 +36,7 @@ describe Book, type: :request do
   describe 'List books API' do
     before do
       create_list(:book, 10)
-      get '/books/api/list.json'
+      get :index, format: :json
     end
 
     it 'return 200 success code' do
@@ -53,14 +54,14 @@ describe Book, type: :request do
 
     context 'when proper id' do
       it 'return 200 success code' do
-        delete "/books/api/#{book.id}.json"
+        delete :destroy, id: "#{book.id}", format: :json
         expect(response).to be_success
       end
     end
 
     context 'when improper id' do
       it 'returns 400 error code' do
-        delete '/books/api/100.json'
+        delete :destroy, id: '100', format: :json
         expect(response).not_to be_success
       end
     end

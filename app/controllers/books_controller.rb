@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
   before_action :fetch_book, only: %i(show edit update destroy)
 
-  def list
+  def index
     @book = Book.all
     respond_to do |format|
       format.json { render json: @book }
